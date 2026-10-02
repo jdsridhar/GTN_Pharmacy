@@ -1,0 +1,26 @@
+{
+  "Agriculture Engineering": [
+    {
+      "employee_id": 1453,
+      "first_name": "Dr. CHANDRASEKARAN",
+      "middle_name": null,
+      "last_name": "GOPALAN",
+      "designation": "Associate Professor",
+      "business_unit___cost_center": "GTN College of Pharmacy",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+    }
+    
+  ],
+  "Biomedical Engineering": [
+    {
+      "employee_id": 1451,
+      "first_name": "Mr. PETCHINATHAN",
+      "middle_name": null,
+      "last_name": "G",
+      "designation": "Professor",
+      "business_unit___cost_center": "GTN College of Pharmacy",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+    }
+    ]
+   
+}

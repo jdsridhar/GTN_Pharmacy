@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "Diamond Jubilee",
+    "title": "G.T. Narayanaswamy Naidu Charities Trust Celebrates 60 Glorious Years of Educational Service (1963–2024)",
+    "image": "/images/gtn/mainBuilding.png",
+    "href": "/about#trust",
+    "variant": "spotlight"
+  },
+  {
+    "id": 2,
+    "category": "Community Service",
+    "title": "GTN Institutions Organize Free Community Health and Medical Camps Across Dindigul District",
+    "image": "/images/gtn/gallery1.png",
+    "href": "/about#vision",
+    "variant": "standard"
+  },
+  {
+    "id": 3,
+    "category": "Legal Outreach",
+    "title": "GTN Free Legal Aid Centre Dedicated to Helping Rural Communities Secure Timely Justice",
+    "image": "/images/gtn/gallery2.png",
+    "href": "/about#mission",
+    "variant": "standard"
+  },
+  {
+    "id": 4,
+    "category": "Green Campus",
+    "title": "District Pollution Control Board & GTN Launch District-Wide Environmental Awareness Drive",
+    "image": "/images/gtn/gallery3.png",
+    "href": "/features/facilities",
+    "variant": "standard"
+  },
+  {
+    "id": 5,
+    "category": "Women Leadership",
+    "title": "Siragai Viri Uyare Para: GTN Hosts Inspiring Women Empowerment and Career Mentorship Meet",
+    "image": "/images/gtn/gallery4.png",
+    "href": "/about",
+    "variant": "standard"
+  },
+  {
+    "id": 6,
+    "category": "Pharmacy Focus",
+    "title": "GTN College of Pharmacy Hosts State-Level Clinical Research and Drug Formulation Symposium",
+    "image": "/images/gtn/hero.jpg",
+    "href": "/departments/bpharm",
+    "variant": "wide"
+  }
+]

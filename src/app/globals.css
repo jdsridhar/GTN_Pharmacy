@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any custom base styles here */
+body {
+  @apply text-neutral-800 antialiased;
+  overflow-x: hidden;
+}
+
+.grid-wrap {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.card {
+  @apply rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md;
+}
+.card-muted {
+  @apply rounded-2xl border bg-neutral-50/70;
+}
+
+.btn {
+  @apply inline-block rounded-full px-5 py-2.5 text-sm font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-hover;
+}
+
+.prose-hero {
+  max-width: 65ch;
+}
+.prose-hero h1 {
+  @apply text-4xl font-semibold tracking-tight md:text-5xl;
+}
+.prose-hero p {
+  @apply mt-4 text-lg text-neutral-700;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.5s ease-in-out forwards;
+}
