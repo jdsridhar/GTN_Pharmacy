@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Phone, Mail, ChevronDown, LogIn } from "lucide-react";
+import { Search, Phone, Mail, ChevronDown, LogIn, Megaphone } from "lucide-react";
 
 const navLinks = {
   about: [
@@ -63,8 +63,16 @@ export default function Header() {
             <Link href="/assets/data/sample.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline whitespace-nowrap">Feedback</Link>
 
             <Link
+              href="/announcements"
+              className="inline-flex items-center gap-1.5 bg-amber-400/20 hover:bg-amber-400/30 text-amber-300 hover:text-white border border-amber-400/40 font-bold px-3.5 py-1.5 rounded-full text-sm shadow transition duration-200"
+            >
+              <Megaphone size={15} className="text-amber-400" />
+              <span>Announcements</span>
+            </Link>
+
+            <Link
               href="/login"
-              className="inline-flex items-center gap-1.5 bg-[#fbd304] text-[#1e2f5c] hover:bg-yellow-400 font-bold px-4 py-1.5 rounded-full text-sm shadow transition duration-200 ml-2"
+              className="inline-flex items-center gap-1.5 bg-[#fbd304] text-[#1e2f5c] hover:bg-yellow-400 font-bold px-4 py-1.5 rounded-full text-sm shadow transition duration-200 ml-1"
             >
               <LogIn size={15} />
               <span>Portal Login</span>
@@ -72,15 +80,28 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Contact row (mobile only) */}
+        {/* Contact & Quick Access row (mobile only) */}
         <div className="container mx-auto px-6 pb-2 flex items-center justify-between text-sm text-white/95 lg:hidden">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 text-xs">
             <a href="tel:+917871633313" className="flex items-center gap-1">
-              <Phone size={14} /> <span>+91 78716 33313</span>
+              <Phone size={13} /> <span>+91 78716 33313</span>
             </a>
-            <a href="mailto:gtntrustofficial@gmail.com" className="flex items-center gap-1">
-              <Mail size={14} /> <span>gtntrustofficial@gmail.com</span>
-            </a>
+          </div>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/announcements"
+              className="inline-flex items-center gap-1 bg-amber-400/20 text-amber-300 px-2.5 py-1 rounded-full text-xs font-bold border border-amber-400/40"
+            >
+              <Megaphone size={13} />
+              <span>Announcements</span>
+            </Link>
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-1 bg-[#fbd304] text-[#1e2f5c] px-2.5 py-1 rounded-full text-xs font-bold shadow"
+            >
+              <LogIn size={13} />
+              <span>Login</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -94,6 +115,7 @@ export default function Header() {
             <Dropdown label="About" links={navLinks.about} />
             <Dropdown label="Courses" links={navLinks.courses} />
             <Dropdown label="Features" links={navLinks.features} />
+            <NavItem href="/announcements" label="Announcements" />
             <NavItem label="Contact" href="/contact" />
           </ul>
         </div>

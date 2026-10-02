@@ -39,7 +39,6 @@ import {
   DailyAttendanceRecord,
   createStudentNoDue,
 } from "@/data/portalData";
-import AnnouncementsBoard from "@/components/AnnouncementsBoard";
 import PostAnnouncementModal from "@/components/PostAnnouncementModal";
 
 type ActiveTab = "ROSTER" | "ATTENDANCE_ENTRY" | "FEE_DESK" | "NODUE_DESK";
@@ -471,6 +470,15 @@ export default function PADashboardPage() {
             </Link>
 
             <Link
+              href="/announcements"
+              className="text-xs px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 hover:text-white transition border border-amber-500/40 flex items-center gap-1.5 font-bold shadow-sm"
+              title="Campus Circulars & Announcements"
+            >
+              <Megaphone className="w-3.5 h-3.5 text-amber-400" />
+              <span>Announcements</span>
+            </Link>
+
+            <Link
               href="/dashboard/principal"
               className="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition border border-slate-700 flex items-center gap-1.5"
             >
@@ -602,13 +610,6 @@ export default function PADashboardPage() {
             <span>{attendanceSavedMessage}</span>
           </div>
         )}
-
-        {/* Campus Circulars & Announcements Section */}
-        <AnnouncementsBoard
-          allowPost={true}
-          userRole="pa"
-          defaultPoster="PA Secretariat Office"
-        />
 
         {/* Tab switcher */}
         <div className="flex border-b border-slate-200 gap-4 overflow-x-auto">

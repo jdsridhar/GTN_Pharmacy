@@ -31,7 +31,6 @@ import {
   Megaphone,
 } from "lucide-react";
 import { studentsDatabase, portalSummaryMetrics } from "@/data/portalData";
-import AnnouncementsBoard from "@/components/AnnouncementsBoard";
 import PostAnnouncementModal from "@/components/PostAnnouncementModal";
 
 export default function PrincipalDashboardPage() {
@@ -111,6 +110,15 @@ export default function PrincipalDashboardPage() {
             >
               <Home className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
               <span>Go to Home</span>
+            </Link>
+
+            <Link
+              href="/announcements"
+              className="text-xs px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 hover:text-white transition border border-amber-500/40 flex items-center gap-1.5 font-bold shadow-sm"
+              title="Campus Circulars & Announcements"
+            >
+              <Megaphone className="w-3.5 h-3.5 text-amber-400" />
+              <span>Announcements</span>
             </Link>
 
             <Link
@@ -335,13 +343,6 @@ export default function PrincipalDashboardPage() {
             </div>
           </div>
         )}
-
-        {/* Institutional Campus Circulars & Announcements Section */}
-        <AnnouncementsBoard
-          allowPost={true}
-          userRole="principal"
-          defaultPoster="Dr. S. K. Rathinam (Principal)"
-        />
 
         {/* Students Performance & Registry Table Section */}
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">

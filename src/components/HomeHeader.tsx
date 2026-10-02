@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Phone, Mail, ChevronDown, LogIn } from "lucide-react";
+import { Search, Phone, Mail, ChevronDown, LogIn, Megaphone } from "lucide-react";
 
 const navLinks = {
   about: [
@@ -126,6 +126,14 @@ export default function Header() {
       </div>
 
       <Link
+        href="/announcements"
+        className="inline-flex items-center gap-1.5 bg-amber-400/20 hover:bg-amber-400/30 text-amber-300 hover:text-white border border-amber-400/40 font-bold px-3.5 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition duration-200"
+      >
+        <Megaphone size={15} className="text-amber-400" />
+        <span>Announcements</span>
+      </Link>
+
+      <Link
         href="/login"
         className="inline-flex items-center gap-1.5 bg-[#fbd304] text-[#1e2f5c] hover:bg-yellow-400 font-extrabold px-4 py-1.5 rounded-full text-xs sm:text-sm shadow-md transition duration-200"
       >
@@ -148,6 +156,7 @@ export default function Header() {
         <Dropdown label="About" links={navLinks.about} isScrolled={isScrolled} />
         <Dropdown label="Courses" links={navLinks.courses} isScrolled={isScrolled} />
         <Dropdown label="Features" links={navLinks.features} isScrolled={isScrolled} />
+        <NavItem href="/announcements" label="Announcements" isScrolled={isScrolled} />
         <NavItem label="Contact" href="/contact" isScrolled={isScrolled} />
       </ul>
     </div>

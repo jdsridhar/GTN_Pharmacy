@@ -36,7 +36,6 @@ import {
   FeeReceipt,
 } from "@/data/portalData";
 import StudentNoDueForm from "@/components/StudentNoDueForm";
-import AnnouncementsBoard from "@/components/AnnouncementsBoard";
 
 type TabType =
   | "bio"
@@ -140,6 +139,15 @@ export default function StudentProfileClient({ studentId }: Props) {
             >
               <Home className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
               <span>Go to Home</span>
+            </Link>
+
+            <Link
+              href="/announcements"
+              className="text-xs px-2.5 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 hover:text-white transition border border-amber-500/40 flex items-center gap-1 font-semibold shadow-sm"
+              title="Campus Circulars & Announcements"
+            >
+              <Megaphone className="w-3.5 h-3.5 text-amber-400" />
+              <span className="hidden sm:inline">Announcements</span>
             </Link>
 
             <Link
@@ -321,13 +329,6 @@ export default function StudentProfileClient({ studentId }: Props) {
             </div>
           </div>
         )}
-
-        {/* Campus Circulars & Announcements Section */}
-        <AnnouncementsBoard
-          compact={true}
-          filterAudience={student.courseShort}
-          userRole="student"
-        />
 
         {/* Tab Navigation Navigation Bar */}
         <div className="bg-white rounded-2xl border border-slate-200 p-1.5 shadow-sm flex flex-wrap gap-1">
