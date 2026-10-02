@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node -e \"const fs=require('fs'); if (!fs.existsSync('out')) throw new Error('out directory was not created'); console.log('>>> Static export verified: out folder contains', fs.readdirSync('out').length, 'items');\"",
     "start": "next start",
     "lint": "next lint"
   },
