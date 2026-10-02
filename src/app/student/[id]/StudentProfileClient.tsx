@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   User,
+  Home,
   GraduationCap,
   CreditCard,
   CalendarCheck,
@@ -86,8 +87,12 @@ export default function StudentProfileClient({ studentId }: Props) {
       {/* Top Portal Navigation Bar */}
       <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shadow">
+          <Link
+            href="/"
+            title="GTN College of Pharmacy - Return to Home"
+            className="flex items-center gap-3 group transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shadow group-hover:ring-2 group-hover:ring-amber-400 transition">
               <Image
                 src="/GTN_Pharmacy_Logo.jpeg"
                 alt="GTN Pharmacy"
@@ -98,7 +103,7 @@ export default function StudentProfileClient({ studentId }: Props) {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-sm sm:text-base text-white tracking-wide">
+                <span className="font-bold text-sm sm:text-base text-white tracking-wide group-hover:text-amber-400 transition">
                   GTN College of Pharmacy
                 </span>
                 <span className="hidden md:inline-block px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30">
@@ -109,7 +114,7 @@ export default function StudentProfileClient({ studentId }: Props) {
                 The Tamil Nadu Dr. M.G.R. Medical University & PCI Affiliated
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Quick navigation and Student Selector */}
           <div className="flex items-center gap-2 sm:gap-3">
@@ -127,6 +132,15 @@ export default function StudentProfileClient({ studentId }: Props) {
                 ))}
               </select>
             </div>
+
+            <Link
+              href="/"
+              className="text-xs px-2.5 sm:px-3 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 hover:text-white transition border border-emerald-500/40 flex items-center gap-1.5 font-medium shadow-sm group"
+              title="Return to Main Website Homepage"
+            >
+              <Home className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <span>Go to Home</span>
+            </Link>
 
             <Link
               href="/dashboard/principal"
@@ -160,10 +174,15 @@ export default function StudentProfileClient({ studentId }: Props) {
         {/* Breadcrumb & Switcher for Mobile */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500">
           <div className="flex items-center gap-2">
+            <Link href="/" className="hover:text-emerald-700 flex items-center gap-1 text-slate-500 hover:font-medium transition">
+              <Home className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Home</span>
+            </Link>
+            <ChevronRight className="w-3 h-3 text-slate-400" />
             <Link href="/dashboard/principal" className="hover:text-emerald-700">
               Principal Dashboard
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-3 h-3 text-slate-400" />
             <span className="text-slate-800 font-semibold">{student.name} ({student.id})</span>
           </div>
 

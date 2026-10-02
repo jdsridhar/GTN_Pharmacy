@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ShieldCheck,
+  Home,
   UserCheck,
   GraduationCap,
   KeyRound,
@@ -110,9 +111,20 @@ export default function LoginPage() {
           </div>
         </Link>
 
-        <div className="hidden sm:flex items-center gap-2 text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full">
-          <ShieldCheck className="w-4 h-4" />
-          PCI Approved • The TN Dr. M.G.R. Medical University
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-xs font-medium text-white bg-white/10 hover:bg-white/20 border border-white/15 px-3 py-1.5 rounded-lg backdrop-blur-md transition group shadow-sm"
+            title="Return to Main Website Homepage"
+          >
+            <Home className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" />
+            <span>Go to Home</span>
+          </Link>
+
+          <div className="hidden sm:flex items-center gap-2 text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full">
+            <ShieldCheck className="w-4 h-4" />
+            PCI Approved • The TN Dr. M.G.R. Medical University
+          </div>
         </div>
       </div>
 

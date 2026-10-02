@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   School,
+  Home,
   Users,
   GraduationCap,
   IndianRupee,
@@ -73,8 +74,12 @@ export default function PrincipalDashboardPage() {
       {/* Top Portal Navigation Bar */}
       <header className="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-30 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shadow">
+          <Link
+            href="/"
+            title="GTN College of Pharmacy - Return to Home"
+            className="flex items-center gap-3 group transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shadow group-hover:ring-2 group-hover:ring-emerald-400 transition">
               <Image
                 src="/GTN_Pharmacy_Logo.jpeg"
                 alt="GTN Pharmacy"
@@ -85,7 +90,7 @@ export default function PrincipalDashboardPage() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-sm sm:text-base text-white tracking-wide">
+                <span className="font-bold text-sm sm:text-base text-white tracking-wide group-hover:text-emerald-400 transition">
                   GTN College of Pharmacy
                 </span>
                 <span className="hidden md:inline-block px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
@@ -96,9 +101,18 @@ export default function PrincipalDashboardPage() {
                 G.T. Narayanaswamy Naidu Charities Trust • Dindigul
               </p>
             </div>
-          </div>
+          </Link>
 
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              href="/"
+              className="text-xs px-3 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 hover:text-white transition border border-emerald-500/40 flex items-center gap-1.5 font-medium shadow-sm group"
+              title="Return to Main Website Homepage"
+            >
+              <Home className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <span>Go to Home</span>
+            </Link>
+
             <Link
               href="/dashboard/pa"
               className="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition border border-slate-700 flex items-center gap-1.5"
