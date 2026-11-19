@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 import FooterSwitcher from "@/components/FooterSwitcher";
 import HeaderSwitcher from "@/components/HeaderSwitcher"; // <-- add
+import StudentChatVoiceBot from "@/components/StudentChatVoiceBot";
 
 export const metadata: Metadata = {
   title: "GTN College of Pharmacy | GTN Group of Institutions",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <HeaderSwitcher /> {/* <-- swaps HomeHeader vs Header */}
         <main className="flex-1">{children}</main>
         <FooterSwitcher />
+        <StudentChatVoiceBot />
       </body>
     </html>
   );

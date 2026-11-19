@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ev-1",
+    "title": "National Seminar on Recent Trends in Novel Drug Delivery Systems",
+    "category": "Academic Symposium",
+    "date": "OCT 25",
+    "time": "09:30 AM - 04:30 PM",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop"
+  },
+  {
+    "id": "ev-2",
+    "title": "World Pharmacists Day Celebration & Foundation Symposium",
+    "category": "Campus Event",
+    "date": "NOV 05",
+    "time": "10:00 AM - 01:00 PM",
+    "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&h=800&fit=crop"
+  }
+]
